@@ -1,4 +1,4 @@
-import { getMovies } from "./store.js";
+import { getContents } from "./api.js";
 import{creerCarte,creerModal} from "./render.js";
 const moviesG = document.querySelector("#movies");
 const modal=document.querySelector("#modal");
@@ -16,7 +16,7 @@ let filmparpage = 6;
 
 async function init() {
     try{
-     movies= await getMovies();
+     movies= await getContents();
      afficherFilms();
      afficherFavoris();
     console.log(movies);

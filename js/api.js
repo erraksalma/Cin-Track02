@@ -15,9 +15,7 @@ export async function request(url, options ={}) {
     } catch(error){
         console.log("Erreur",error);
         throw error;
-        
     }
-    
 }
 export async function getContents() {
     return await request("/contents");

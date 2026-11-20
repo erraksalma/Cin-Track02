@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,85 @@
     <link rel="stylesheet" href="./css/output.css" />
 
 </head>
-<body>
-    <h1>Administration du contenus</h1>
-    <main>
-        <div id="adminContents"></div>
-    </main>
-    <script type="module" src="./js/admin.js"></script>
+
+<body class="bg-[#101010] text-white p-8">
+
+    <h1 class="text-3xl font-bold mb-8">
+        Administration CinéTrack
+    </h1>
+    <div>
+        <a href="./index.html" class="bg-[#800020] hover:bg-[#600018] text-white
+          px-5 py-2 rounded-lg font-semibold
+          transition duration-300 shadow-md
+          inline-flex items-center gap-2">
+            index
+        </a>
+        <form id="contentForm"
+            class="bg-[#171717] border border-gray-800 p-6 rounded-xl mb-10 flex flex-col gap-4 shadow-lg">
+            <input type="text" id="title" placeholder="Titre" required
+                class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 outline-none focus:border-[#B03050]">
+
+            <select id="type" required
+                class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 outline-none focus:border-[#B03050]">
+                <option value="">Choisir le type</option>
+                <option value="movie">Film</option>
+                <option value="series">Série</option>
+            </select>
+
+            <input type="number" id="releaseYear" placeholder="Année de sortie" required
+                class="p-3 rounded bg-[#262626]  text-white border border-gray-700 outline-none focus:border-[#B03050]">
+
+            <input type="url" id="image" placeholder="URL de l'image" required
+                class="p-3 rounded bg-[#262626]  text-white border border-gray-700 outline-none focus:border-[#B03050]">
+
+            <div id="durationContainer">
+                <input type="number" id="duration" placeholder="Durée en minutes"
+                    class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 w-full">
+            </div>
+            <div id="seasonsContainer" class="hidden">
+                <input type="number" id="seasons" placeholder="Nombre de saisons"
+                    class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 w-full">
+            </div>
+
+
+
+            <input type="text" id="genres" placeholder="Genres" required
+                class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 outline-none focus:border-[#B03050]">
+
+            <textarea id="description" placeholder="Description du film" required
+                class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 outline-none focus:border-[#B03050]"></textarea>
+
+            <input type="text" id="directors" placeholder="Realisateurs" required
+                class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 outline-none focus:border-[#B03050]">
+
+            <input type="text" id="productionCountries" placeholder="Pays de production" required
+                class="p-3 rounded-lg bg-[#262626] text-white border border-gray-700 outline-none focus:border-[#B03050]">
+
+
+            <button type="submit" id="submitBtn"
+                class="bg-[#B03050] hover:bg-[#8B1E3F] text-white p-3 rounded-lg font-bold transition">
+                Ajouter
+            </button>
+
+        </form>
+
+        <div class="overflow-x-auto bg-[#171717] rounded-xl border border-gray-800 shadow-lg">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-[#252525] text-[#B03050]">
+                    <tr>
+                        <th class="p-4">Image</th>
+                        <th class="p-4">Titre</th>
+                        <th class="p-4">Type</th>
+                        <th class="p-4">Année</th>
+                        <th class="p-4">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="adminContents" class="text-gray-300"></tbody>
+            </table>
+        </div>
+
+        <script type="module" src="./js/admin.js"></script>
 </body>
+
 </html>

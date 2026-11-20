@@ -82,5 +82,6 @@ Cin-Track02/
 
 Projet réalisé dans le cadre de la formation en développement web à **YouCode – UM6P**.
 
+Découvrez CinéTrack V2 : https://cintrack02.vercel.app/
 ---
 

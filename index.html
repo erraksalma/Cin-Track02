@@ -86,7 +86,43 @@
     <div id="modal" class="hidden fixed inset-0 z-50 bg-black items-center justify-center p-4">
  <div class="relative bg-black rounded-xl p-6  ">
 <button id="closeModal" class="absolute  text-[#800020] bg-white rounded-lg px-4 py-4">X</button>
-<div id="modalContent">
+<div id="modalContent"></div>
+<div class="mt-6 border-t border-gray-700 pt-5">
+
+    <h3 class="text-xl font-bold text-[#B03050] mb-4">
+        Commentaires
+    </h3>
+
+    <div id="commentsList" class="flex flex-col gap-4">
+    </div>
+
+    <form id="commentForm" class="mt-6 flex flex-col gap-3">
+
+        <input
+            type="text"
+            id="author"
+            placeholder="Ton nom"
+            required
+            class="p-3 rounded-lg bg-[#262626] border border-gray-700 text-white"
+        >
+
+        <textarea
+            id="commentText"
+            placeholder="Écris ton commentaire..."
+            required
+            class="p-3 rounded-lg bg-[#262626] border border-gray-700 text-white"
+        ></textarea>
+
+        <button
+            type="submit"
+            class="bg-[#800020] hover:bg-[#600018] p-3 rounded-lg font-bold"
+        >
+            Publier
+        </button>
+
+    </form>
+
+</div>
 </div>
  </div>
     </div>

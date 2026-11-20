@@ -22,7 +22,7 @@ async function afficherContenus() {
     adminContent.innerHTML = "";
     contents.forEach((content) => {
       adminContent.innerHTML += `
-    <tr class="border-b border-gray-700">
+    <tr class="border-b border-gray-700 ">
                     <td class="p-4">
                         <img src="${content.image}"
                              class="w-16 h-20 object-cover rounded">
